@@ -3,7 +3,8 @@ import { findCheat } from './find.js'
 
 /**
  * @typedef {Object} CheatsConfig
- * @property {(name: string) => void} handle
+ * @property {(name: string) => void} onCheat
+ * @property {(code: string) => void} [onKey] - optional
  * @property {import('./find').CheatMap} cheats
  */
 
@@ -15,8 +16,9 @@ import { findCheat } from './find.js'
 function findLongestCheat (cheats) {
   let max = 0
   for (const key in cheats) {
-    if (key.length > max) {
-      max = key.length
+    const length = cheats[key] >> 24
+    if (length > max) {
+      max = length
     }
   }
   return max
@@ -27,11 +29,14 @@ function findLongestCheat (cheats) {
  * @param {CheatsConfig} config
  * @returns
  */
-export function createCheatsListener ({ handle, cheats }) {
+export function createCheatsListener ({ onCheat, onKey, cheats }) {
   const codeBuffer = []
   const limit = findLongestCheat(cheats)
 
   function handleKeyDown (event) {
+    if (onKey) {
+      onKey(event.code)
+    }
     if (codeBuffer.length >= limit) {
       codeBuffer.shift()
     }
@@ -41,7 +46,7 @@ export function createCheatsListener ({ handle, cheats }) {
     const cheat = findCheat(codeBuffer, cheats)
     if (cheat !== null) {
       codeBuffer.length = 0
-      handle(cheat)
+      onCheat(cheat)
     }
   }
 
