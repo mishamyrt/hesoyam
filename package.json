@@ -1,0 +1,28 @@
+{
+  "name": "hesoyam",
+  "version": "0.0.1",
+  "description": "A library for embedding cheat codes into your web interfaces",
+  "type": "module",
+  "scripts": {
+    "build": "vite build && pnpm gen-types",
+    "gen-types": "tsc src/*.js --declaration --allowJs --emitDeclarationOnly --outDir dist && mv dist/index.d.ts dist/hesoyam.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
+    "vite-plugin-dts": "^3.8.1"
+  },
+  "source": "src/index.js",
+  "main": "dist/hesoyam.js",
+  "module": "dist/hesoyam.js",
+  "types": "dist/hesoyam.d.ts"
+}
