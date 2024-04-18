@@ -1,16 +1,7 @@
 import { encode } from './encode.js'
+import { CheatMap } from './types.js'
 
-/**
- * @typedef {Record<string, number>} CheatMap
- */
-
-/**
- *
- * @param {number[]} input
- * @param {CheatMap} cheats
- * @returns {string | null}
- */
-export function findCheat (input, cheats) {
+export function findCheat (input: number[], cheats: CheatMap): string | null {
   const totalLength = Object.keys(cheats).length
   let overflowCount = 0
   for (let i = 0; i < input.length; i += 1) {

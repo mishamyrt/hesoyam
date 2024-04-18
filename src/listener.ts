@@ -1,19 +1,7 @@
-// @ts-check
 import { findCheat } from './find.js'
+import type { CheatListener, CheatsConfig, CheatMap } from './types.js'
 
-/**
- * @typedef {Object} CheatsConfig
- * @property {(name: string) => void} onCheat
- * @property {(code: string) => void} [onKey] - optional
- * @property {import('./find').CheatMap} cheats
- */
-
-/**
- *
- * @param {import('./find').CheatMap} cheats
- * @returns {number}
- */
-function findLongestCheat (cheats) {
+function findLongestCheat (cheats: CheatMap): number {
   let max = 0
   for (const key in cheats) {
     const length = cheats[key] >> 24
@@ -24,16 +12,15 @@ function findLongestCheat (cheats) {
   return max
 }
 
-/**
- *
- * @param {CheatsConfig} config
- * @returns
- */
-export function createCheatsListener ({ onCheat, onKey, cheats }) {
-  const codeBuffer = []
+export function createCheatsListener ({
+  onCheat,
+  onKey,
+  cheats
+}: CheatsConfig): CheatListener {
+  const codeBuffer: number[] = []
   const limit = findLongestCheat(cheats)
 
-  function handleKeyDown (event) {
+  function handleKeyDown (event: KeyboardEvent) {
     if (onKey) {
       onKey(event.code)
     }

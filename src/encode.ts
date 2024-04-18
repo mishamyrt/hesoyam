@@ -1,9 +1,7 @@
 /**
  * Encodes a number array into a hash number
- * @param {number[]} input
- * @returns {number}
  */
-export function encode (input) {
+export function encode (input: number[]): number {
   let delta = 0
   let checksum = 0
   for (let i = 0; i < input.length; i += 1) {
@@ -27,9 +25,7 @@ export function encode (input) {
 
 /**
  * Encodes a string into a hash number
- * @param {string} input
- * @returns {number}
  */
-export function encodeString (input) {
+export function encodeString (input: string): number {
   return encode(input.split('').map(c => c.charCodeAt(0)))
 }
