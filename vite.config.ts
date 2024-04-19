@@ -1,6 +1,5 @@
 // @ts-check
 import path from 'path'
-import dts from 'vite-plugin-dts'
 
 import { defineConfig } from 'vite'
 

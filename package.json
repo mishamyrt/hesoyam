@@ -7,6 +7,7 @@
     "build": "vite build && pnpm gen-types",
     "gen-types": "tsc src/*.ts --declaration --emitDeclarationOnly --outDir dist && mv dist/index.d.ts dist/hesoyam.d.ts",
     "encode": "tsx scripts/encode.ts",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
