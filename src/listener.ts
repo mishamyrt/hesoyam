@@ -1,29 +1,15 @@
 import { findCheat } from './find.js'
-import type { CheatListener, CheatsConfig, CheatMap } from './types.js'
-
-function findLongestCheat (cheats: CheatMap): number {
-  let max = 0
-  for (const key in cheats) {
-    const length = cheats[key] >> 24
-    if (length > max) {
-      max = length
-    }
-  }
-  return max
-}
+import { maxLength } from './length.js'
+import type { CheatListener, CheatsConfig } from './types.js'
 
 export function createCheatsListener ({
   onCheat,
-  onKey,
   cheats
 }: CheatsConfig): CheatListener {
   const codeBuffer: number[] = []
-  const limit = findLongestCheat(cheats)
+  const limit = maxLength(cheats)
 
   function handleKeyDown (event: KeyboardEvent) {
-    if (onKey) {
-      onKey(event.code)
-    }
     if (codeBuffer.length >= limit) {
       codeBuffer.shift()
     }

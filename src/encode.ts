@@ -9,7 +9,7 @@ export function encode (input: number[]): number {
     if (i % 2 === 0) {
       delta += code
     } else {
-      delta *= (code % 3)
+      delta *= code % 3
     }
     checksum += code % 3
   }
