@@ -35,6 +35,30 @@ describe('createCheatsListener', () => {
     expect(spy).toHaveBeenCalledWith('keydown', expect.any(Function))
   })
 
+  it('subscribes to custom node keyboard events', () => {
+    const el = document.createElement('div')
+    const spy = vi.spyOn(el, 'addEventListener')
+    const { start } = createCheatsListener({
+      onCheat: vi.fn(),
+      cheats,
+      target: el
+    })
+    start()
+    expect(spy).toHaveBeenCalledWith('keydown', expect.any(Function))
+  })
+
+  it('stops listening to custom node keyboard events', () => {
+    const el = document.createElement('div')
+    const spy = vi.spyOn(el, 'removeEventListener')
+    const { stop } = createCheatsListener({
+      onCheat: vi.fn(),
+      cheats,
+      target: el
+    })
+    stop()
+    expect(spy).toHaveBeenCalledWith('keydown', expect.any(Function))
+  })
+
   it('handles keyboard events', () => {
     const onCheat = vi.fn()
     const { start } = createCheatsListener({

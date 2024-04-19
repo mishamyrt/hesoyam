@@ -4,7 +4,8 @@ import type { CheatListener, CheatsConfig } from './types.js'
 
 export function createCheatsListener ({
   onCheat,
-  cheats
+  cheats,
+  target = document
 }: CheatsConfig): CheatListener {
   const codeBuffer: number[] = []
   const limit = maxLength(cheats)
@@ -25,10 +26,10 @@ export function createCheatsListener ({
 
   return {
     start: () => {
-      document.addEventListener('keydown', handleKeyDown)
+      target.addEventListener('keydown', handleKeyDown)
     },
     stop: () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      target.removeEventListener('keydown', handleKeyDown)
     }
   }
 }
