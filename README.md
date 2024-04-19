@@ -1,4 +1,4 @@
-# 🎮 Hesoyam
+# 🎮 Hesoyam [![Quality Assurance](https://github.com/mishamyrt/hesoyam/actions/workflows/qa.yaml/badge.svg)](https://github.com/mishamyrt/hesoyam/actions/workflows/qa.yaml)
 
 The library provides an engine for entering cheat codes in your web applications. For example, this is how you can hide some functionality without resorting to feature toggles or inject an easter egg.
 
