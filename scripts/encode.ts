@@ -1,5 +1,3 @@
-#!/usr/bin/env tsx
-
 import { encodeString } from '../src/encode.js'
 
 function main () {

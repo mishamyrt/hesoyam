@@ -1,5 +1,5 @@
 import { encode } from './encode.js'
-import { CheatMap } from './types.js'
+import type { CheatMap } from './types.js'
 
 export function findCheat (input: number[], cheats: CheatMap): string | null {
   const totalLength = Object.keys(cheats).length
