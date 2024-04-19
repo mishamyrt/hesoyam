@@ -1,7 +1,7 @@
-import { createCheatsListener } from '../src/listener'
+import { createCheatsListener } from '../src/listener.js'
 
 const { start } = createCheatsListener({
-  handle: (name) => {
+  onCheat: (name) => {
     alert(name.toUpperCase())
   },
   cheats: {
