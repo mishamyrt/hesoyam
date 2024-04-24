@@ -1,0 +1,18 @@
+.cheats {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cheat {
+  font-size: 25px;
+  line-height: 40px;
+  opacity: 0.5;
+  transition: .3s ease-out;
+  transition-property: opacity, font-weight, color;
+}
+
+.cheat.activated {
+  opacity: 1;
+  font-weight: 700;
+  color: var(--color-foreground-success);
+}

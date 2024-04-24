@@ -1,0 +1,44 @@
+:root {
+  --font-family: "Raleway", sans-serif;
+  --color-background: #fff;
+  --color-foreground: #1f2328;
+  --color-link-background: #d0d7de33;
+  --color-foreground-success: #1a7f37;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #23272e;
+    --color-foreground: #c5d1de;
+    --color-link-background: #d0d7de33;
+    --color-foreground-success: #57ab5a;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color-scheme: light dark;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+a {
+  color: var(--color-foreground);
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color .3s ease-out;
+  padding: 6px 8px;
+  margin-left: -8px;
+  border-radius: 4px;
+}
+
+a:hover {
+  background-color: var(--color-link-background);
+  transition: background-color 0s;
+}
