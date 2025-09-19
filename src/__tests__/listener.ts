@@ -1,10 +1,10 @@
 import { it, describe, expect, vi } from 'vitest'
 import { createCheatsListener } from '../listener.js'
 
-const cheats = {
-  yey: 0x03016B04,
-  wow: 0x03007704
-}
+const cheats = [
+  0x03016B04,
+  0x03007704
+]
 
 function dispatchKeys (keys: string[]) {
   keys.forEach((key) => {
@@ -67,6 +67,6 @@ describe('createCheatsListener', () => {
     })
     start()
     dispatchKeys(['KeyY', 'KeyE', 'KeyY'])
-    expect(onCheat).toHaveBeenCalledWith('yey')
+    expect(onCheat).toHaveBeenCalledWith(0x03016B04)
   })
 })

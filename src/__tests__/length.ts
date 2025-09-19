@@ -13,16 +13,16 @@ describe('extractLength', () => {
 
 describe('maxLength', () => {
   it('correctly finds max length', () => {
-    expect(maxLength({
-      h: 0x01000000,
-      he: 0x02000000,
-      hes: 0x03000000
-    })).toBe(3)
+    expect(maxLength([
+      0x01000000,
+      0x02000000,
+      0x03000000
+    ])).toBe(3)
 
-    expect(maxLength({
-      hello: 0x05000000,
-      world: 0x05000000,
-      helloWorld: 0x0A006C07
-    })).toBe(10)
+    expect(maxLength([
+      0x05000000,
+      0x05000000,
+      0x0A006C07
+    ])).toBe(10)
   })
 })
