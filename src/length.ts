@@ -1,5 +1,3 @@
-import { type CheatMap } from './types.js'
-
 /**
  * Extracts the length from an encoded cheat code
  */
@@ -10,10 +8,10 @@ export function extractLength (value: number): number {
 /**
  * Finds the longest length in a cheats map
  */
-export function maxLength (cheats: CheatMap): number {
+export function maxLength (cheats: number[]): number {
   let max = 0
-  for (const key in cheats) {
-    const length = extractLength(cheats[key])
+  for (const value of cheats) {
+    const length = extractLength(value)
     if (length > max) {
       max = length
     }

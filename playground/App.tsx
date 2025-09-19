@@ -2,7 +2,6 @@ import React from 'react'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-// import { UsecaseList } from './UsecaseList'
 import { usecases } from './usecases/usecases.js'
 import styles from './App.module.css'
 import { UsecaseList } from './UsecaseList.js'

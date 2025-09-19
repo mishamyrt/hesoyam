@@ -1,10 +1,8 @@
-export type CheatMap = Record<string, number>
-
 type Subscribable = Pick<Window, 'addEventListener' | 'removeEventListener'>
 
 export type CheatsConfig = {
-  onCheat: (name: string) => void
-  cheats: Record<string, number>
+  onCheat: (cheat: number) => void
+  cheats: number[]
   target?: Subscribable
 }
 
