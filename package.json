@@ -7,7 +7,7 @@
     "start": "pnpm dev",
     "dev": "vite",
     "build": "vite build && pnpm gen-types",
-    "gen-types": "tsc src/*.ts --declaration --emitDeclarationOnly --outDir dist && mv dist/index.d.ts dist/hesoyam.d.ts",
+    "gen-types": "tsc -p tsconfig.build.json && mv dist/index.d.ts dist/hesoyam.d.ts",
     "encode": "tsx scripts/encode.ts",
     "codes": "tsx scripts/char-codes.ts",
     "lint": "eslint .",
@@ -18,7 +18,12 @@
     "cheats",
     "typescript"
   ],
-  "author": "Khrustik Mikhael <misha@myrt.co>",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "author": "Mikhael Khrustik <misha@myrt.co>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.9.1",
