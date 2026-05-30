@@ -41,14 +41,15 @@ pnpm add hesoyam
 ```ts
 import { createCheatsListener } from 'hesoyam';
 
+const HESOYAM = 117499400;
+
 const { start } = createCheatsListener({
   onCheat: (code) => {
-    // got 'getMoney'
-    console.log('Got code', code);
+    if (code === HESOYAM) {
+      console.log('Got hesoyam code', code);
+    }
   },
-  cheats: {
-    getMoney: 117499400, // hesoyam
-  },
+  cheats: [HESOYAM],
 });
 
 start();
