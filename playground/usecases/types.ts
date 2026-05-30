@@ -1,7 +1,7 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
 export type Usecase = {
-  name: string
-  directory: string
-  Component: FC
-}
+  name: string;
+  directory: string;
+  Component: FC;
+};

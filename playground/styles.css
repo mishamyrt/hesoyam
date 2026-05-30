@@ -1,5 +1,5 @@
 :root {
-  --font-family: "Raleway", sans-serif;
+  --font-family: 'Raleway', sans-serif;
   --color-background: #fff;
   --color-foreground: #1f2328;
   --color-link-background: #d0d7de33;
@@ -32,7 +32,7 @@ a {
   color: var(--color-foreground);
   text-decoration: none;
   background-color: transparent;
-  transition: background-color .3s ease-out;
+  transition: background-color 0.3s ease-out;
   padding: 6px 8px;
   margin-left: -8px;
   border-radius: 4px;

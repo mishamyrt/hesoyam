@@ -1,28 +1,20 @@
-import { it, describe, expect } from 'vitest'
+import { it, describe, expect } from 'vitest';
 
-import { extractLength, maxLength } from '../length.js'
+import { extractLength, maxLength } from '../length.js';
 
 describe('extractLength', () => {
   it('correctly extracts length', () => {
-    expect(extractLength(0x01000000)).toBe(1)
-    expect(extractLength(0x03FFFFFF)).toBe(3)
-    expect(extractLength(0x25202030)).toBe(37)
-    expect(extractLength(0x11102030)).toBe(17)
-  })
-})
+    expect(extractLength(0x01000000)).toBe(1);
+    expect(extractLength(0x03ffffff)).toBe(3);
+    expect(extractLength(0x25202030)).toBe(37);
+    expect(extractLength(0x11102030)).toBe(17);
+  });
+});
 
 describe('maxLength', () => {
   it('correctly finds max length', () => {
-    expect(maxLength([
-      0x01000000,
-      0x02000000,
-      0x03000000
-    ])).toBe(3)
+    expect(maxLength([0x01000000, 0x02000000, 0x03000000])).toBe(3);
 
-    expect(maxLength([
-      0x05000000,
-      0x05000000,
-      0x0A006C07
-    ])).toBe(10)
-  })
-})
+    expect(maxLength([0x05000000, 0x05000000, 0x0a006c07])).toBe(10);
+  });
+});
