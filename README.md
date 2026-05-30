@@ -20,6 +20,7 @@ The library provides an engine for entering cheat codes in your web applications
 
 - **Framework agnostic**.
 - **Zero dependencies**
+- **Less then kilobyte (even without GZip)**
 
 ## How does it work?
 
