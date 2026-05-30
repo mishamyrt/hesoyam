@@ -1,4 +1,20 @@
-# 🎮 Hesoyam [![Quality Assurance](https://github.com/mishamyrt/hesoyam/actions/workflows/qa.yaml/badge.svg)](https://github.com/mishamyrt/hesoyam/actions/workflows/qa.yaml)
+<p align="center">
+  <img width="350" src="./docs/logo.svg" alt="hesoyam logo" />
+  <br />
+  <br />
+  Minimal old-school hidden features for your web applications.
+</p>
+
+---
+
+<p align="center">
+  <a href="https://github.com/mishamyrt/hesoyam/actions/workflows/qa.yaml">
+    <img src="https://github.com/mishamyrt/hesoyam/actions/workflows/qa.yaml/badge.svg" alt="Quality Assurance" />
+  </a>
+  <a href="https://npmjs.com/package/hesoyam">
+    <img src="https://img.shields.io/npm/v/hesoyam.svg?color=red" alt="NPM Version" />
+  </a>
+</p>
 
 The library provides an engine for entering cheat codes in your web applications. For example, this is how you can hide some functionality without resorting to feature toggles or inject an easter egg.
 
