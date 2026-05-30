@@ -31,6 +31,8 @@ Cheat codes are [encoded](scripts/encode.ts) into a special number so that they 
 
 When the listener is activated, the library records all keystrokes and calls a callback as soon as the buffer contains the necessary code.
 
+Cheats are layout agnostic: they work regardless of the keyboard layout.
+
 ## Installation
 
 ```bash
@@ -42,7 +44,7 @@ pnpm add hesoyam
 ```ts
 import { createCheatsListener } from 'hesoyam';
 
-const HESOYAM = 117499400;
+const HESOYAM = 0x0700E608;
 
 const { start } = createCheatsListener({
   onCheat: (code) => {
