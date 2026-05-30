@@ -1,0 +1,36 @@
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-link-background);
+  border-radius: 4px;
+  font: inherit;
+  color: var(--color-foreground);
+  background: var(--color-background);
+}
+
+.result {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.result div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.result dt {
+  font-weight: 700;
+}
+
+.result dd {
+  margin: 0;
+}
