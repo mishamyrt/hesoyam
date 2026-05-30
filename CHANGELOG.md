@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.2](https://github.com/mishamyrt/hesoyam/compare/v0.1.1...v0.1.2) (2026-05-30)
+
 ## [0.1.1](https://github.com/mishamyrt/hesoyam/compare/v0.0.4...v0.1.1) (2025-09-19)
 
 ### Features

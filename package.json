@@ -1,6 +1,6 @@
 {
   "name": "hesoyam",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Old-school cheat codes for modern web apps",
   "type": "module",
   "scripts": {
