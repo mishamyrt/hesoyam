@@ -2,7 +2,7 @@
   <img width="350" src="./docs/logo.svg" alt="hesoyam logo" />
   <br />
   <br />
-  Minimal old-school hidden features for your web applications.
+  Minimal old-school-flavored hidden features for your web applications.
 </p>
 
 ---
